@@ -5,7 +5,7 @@ Micropython project to test the MFRC522 RFID reader and two types of display-dri
 The module ``mfrc522.py`` is for accessing the cheap RFID module via SPI-Bus. The chips are technically able to talk I2C but the board doesn't provide this funtionality be default. You have to un-solder or drill into the board to enable it. So i continued with SPI. This micropython-class to access RFID readers came from here: [https://github.com/wendlers/micropython-mfrc522](https://github.com/wendlers/micropython-mfrc522).
 
 ## Display
-The files ``esp8266_i2c_lcd.py`` and ``lcd_api`` are borrowed from [python_lcd](https://github.com/dhylands/python_lcd) and provide access to the HD77480-compatible LC-Display with an PCF8574 Backpack. On some Backpacks, an alternate chip (MCP23008) is used, but not in this project. Please make sure, you set DISPLAY_I2C_ADDR to the corresponding address of your module. I have a PCF8574A with a default address of 0x3F.
+The files ``esp8266_i2c_lcd.py`` and ``lcd_api.py`` are borrowed from [python_lcd](https://github.com/dhylands/python_lcd) and provide access to the HD77480-compatible LC-Display with an PCF8574 Backpack. On some Backpacks, an alternate chip (MCP23008) is used, but not in this project. Please make sure, you set DISPLAY_I2C_ADDR to the corresponding address of your module. I have a PCF8574A with a default address of 0x3F.
 
 The PCF8574 has addresses 0x20 .. 0x27
 The PCF8574A has addresses 0x38 .. 0x3F
