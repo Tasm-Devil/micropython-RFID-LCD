@@ -24,6 +24,13 @@ For the ESP8266 there are multiple solutions to do that. E.g. use the
 
 I recommend using [mpfshell](https://github.com/wendlers/mpfshell) or the oldschool [adafruit-ampy](https://github.com/adafruit/ampy). They both work good but mpfshell is much more fun and easier to use. With [mpy-utils](https://github.com/nickzoic/mpy-utils) your can mount your esp8266 to your filesystem (WOW!) but you have to unmount if you need to enter the REPL (o_O). Thus its a much slower routine. I cannot recommend it.
 
+### wifi
+The two files in the wifi folder are for quick ifup or ifdown of the wifi. Simple enter REPL and import them.
+    import wifi.wifi_up
+or
+    import wifi.wifi_down
+Do not forger to enter your SSID and Password beforehand.
+
 ## Wiring
 I used the following pins for my setup:
 
