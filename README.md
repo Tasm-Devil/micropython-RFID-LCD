@@ -26,8 +26,10 @@ I recommend using [mpfshell](https://github.com/wendlers/mpfshell) or the oldsch
 
 ### wifi
 The two files in the wifi folder are for quick ifup or ifdown of the wifi. Simple enter REPL and import them.
+
     import wifi.wifi_up
 or
+
     import wifi.wifi_down
 Do not forger to enter your SSID and Password beforehand.
 
