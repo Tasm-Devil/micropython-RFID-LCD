@@ -10,12 +10,8 @@ The files ``esp8266_i2c_lcd.py`` and ``lcd_api.py`` are borrowed from [python_lc
 The PCF8574 has addresses 0x20 .. 0x27
 The PCF8574A has addresses 0x38 .. 0x3F
 
-The module ``ssd1306.py`` is for accessing the cheap oled-Displays. It works perfectly out of the box.
-
-You are asking, why I use two Displays? For testing and ... because I can!
-
 ## Usage
-Put the modules ``mfrc522.py``, ``esp8266_i2c_lcd.py``, ``lcd_api``, ``ssd1306.py`` and ``buzzer.py`` to the root of the flash FS on your board. 
+Copy the folders ``lcd`` and ``rfid`` and the modules ``buzzer.py`` and  ``main.py`` to the root of the flash FS on your board. You dont need to copy the ``wifi``-folder nor the file ``boot.py``
 For the ESP8266 there are multiple solutions to do that. E.g. use the
 * [adafruit-ampy](https://github.com/adafruit/ampy) , 
 * [mpy-utils](https://github.com/nickzoic/mpy-utils), 

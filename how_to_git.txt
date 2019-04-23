@@ -1,3 +1,0 @@
-git add
-git commit -m "added a Foto"
-git push -u origin master
