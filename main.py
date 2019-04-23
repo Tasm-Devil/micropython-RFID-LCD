@@ -76,27 +76,8 @@ def kartebitte():
         lcd.putstr("Karte bitte\nanlegen!")
 
 valid_card_uids = [
-    "0x88045152" ,  #Lasertag-Karte Timo
-    "0xe68e209e" ,  #Zugangskarte Timo
+    "0xf5f810a6" ,  #Zugangskarte Pascal
     "0x46edc659" ,  #Zugangskarte Kamil
-    "0x76d11e9e" ,  #Zugangskarte Karsten
-    "0xc6a2189e" ,  #Zugangskarte Metthias
-    "0xe63eff9d" ,  #Zugangskarte Steven
-    "0x663ba459" ,  #Zugangskarte Caro
-#   "0xd62d4f9a" ,  #Zugangskarte Bettina
-    "0xe63df79d" ,  #Zugangskarte Sabine
-    "0x0683f09d" ,  #Zugangskarte Stefan
-    "0xe60d269e" ,  #Zugangskarte Eva
-    "0x4296de35" ,  #Zugangskarte Marlies
-    "0x92e99835" ,  #Zugangskarte Verein
-#   "0x22e00835" ,  #N/A
-#   "0x7210b07f" ,  #N/A
-#   "0xb2328b35" ,  #N/A
-#   "0x9240aa35" ,  #N/A
-#   "0x82939935" ,  #N/A
-#   "0x12e09a35" ,  #N/A
-#   "0x021d1435" ,  #N/A
-#   "0x4273a035"    #N/A 
 ]
 
 try:
