@@ -7,7 +7,7 @@ from buzzer import BUZZER
 
 #0,    2,   4,   5,   12,  13,  14, (15), 16 <-- Nutzbare GPIO-Pins
 #(D3), D4,  D2,  D1,  D6,  D7,  D5, (D8), D0 <-- Bezeichnungen auf Board
-#    , sda,           mosi,miso,sck,    ,    <-- mfrc522 RFID-Modul
+#    , sda, rst,      mosi,miso,sck,    ,    <-- mfrc522 RFID-Modul
 #                sda                    ,scl <-- I2C Display ssd1306
 #                                   buz      <-- Buzzer
 # D3 darf zum Zeitpunk des Starts nicht verbunden sein. Also nicht nutzbar.
@@ -19,13 +19,14 @@ mosi = Pin(12, Pin.OUT)
 miso = Pin(13, Pin.OUT)
 spi = SPI(baudrate=100000, polarity=0, phase=0, sck=sck, mosi=mosi, miso=miso)
 sda = Pin(2, Pin.OUT)
+rst = Pin(4, Pin.OUT)
 
 
 # I2C-Bus init
 i2c = I2C(scl=Pin(16), sda=Pin(5), freq=400000)
 
 # LC-Display init
-DISPLAY_I2C_ADDR = 0x3F 
+DISPLAY_I2C_ADDR = 0x3F
 DEFAULT_I2C_ADDR = 0x27
 
 lcd = None
@@ -83,7 +84,7 @@ valid_card_uids = [
 try:
     kartebitte()
     while True:
-        rdr = MFRC522(spi, sda)
+        rdr = MFRC522(spi, sda, rst)
         uid = ""
         (stat, tag_type) = rdr.request(rdr.REQIDL)
         if stat == rdr.OK:
